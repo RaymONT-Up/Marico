@@ -1,0 +1,16 @@
+.experts {
+  &__inner {
+    margin-bottom: 190px;
+  }
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__img-wrapper {
+    margin: 0 auto;
+    max-width: 1830px;
+    max-height: 470px;
+  }
+  @media (max-width: 850px) {
+    display: none;
+  }
+}

@@ -1,0 +1,135 @@
+.hero {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 145px;
+    margin-bottom: 185px;
+
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 135px;
+
+    font-weight: bold;
+    font-size: 112px;
+    line-height: 120px;
+
+    color: #ffffff;
+    &--gradient {
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: linear-gradient(90deg, #fe6783 1.9%, #ffbf84 97.1%);
+    }
+  }
+  &__paragraph {
+    max-width: 700px;
+    margin-bottom: 50px;
+
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 60px;
+
+    color: #ffffff;
+  }
+  &__buttons {
+    margin-bottom: 22px;
+  }
+  &__btn {
+    width: 312px;
+    padding: 23px 0;
+    &--one {
+      margin-right: 25px;
+    }
+  }
+  @media (max-width: 1400px) {
+    &__title {
+      margin-bottom: 80px;
+
+      font-size: 90px;
+      line-height: 104px;
+    }
+  }
+  @media (max-width: 1000px) {
+    &__title {
+      margin-bottom: 45px;
+
+      font-size: 70px;
+      line-height: 80px;
+    }
+  }
+  @media (max-width: 750px) {
+    &__title {
+      font-size: 50px;
+      line-height: 60px;
+      margin-bottom: 40px;
+    }
+    &__paragraph {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    &__buttons {
+      width: 100%;
+    }
+    &__btn {
+      display: block;
+      width: 100%;
+      &--one {
+        margin-right: 0;
+        margin-bottom: 25px;
+      }
+    }
+  }
+  @media (max-width: 545px) {
+    &__title {
+      margin-bottom: 30px;
+      font-size: 38px;
+      line-height: 46px;
+    }
+    &__paragraph {
+      margin-bottom: 30px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+    &__users {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  @media (max-width: 430px) {
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+    }
+    &__paragraph {
+      font-size: 22px;
+      line-height: 28px;
+    }
+    &__users {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  @media (max-width: 360px) {
+    &__title {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    &__paragraph {
+      font-size: 20px;
+      line-height: 26px;
+    }
+    &__users {
+      white-space: nowrap;
+      font-size: 13px;
+      line-height: 16px;
+      &::after {
+        left: -20px;
+        width: 14px;
+        height: 14px;
+        border: 2px #258b50 solid;
+      }
+    }
+  }
+}

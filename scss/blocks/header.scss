@@ -1,0 +1,218 @@
+.header {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 45px;
+  }
+  &__nav {
+    margin: 0 auto;
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+  &__dropdown {
+    margin-right: 52px;
+    height: auto;
+    position: relative;
+    &.active .header__dropdown-btn {
+      color: #3c82f4;
+      &::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+    &.active .header__dropdown-list {
+      display: block;
+    }
+  }
+  &__dropdown-btn {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: -18px;
+      top: 50%;
+      width: 11px;
+      height: 6px;
+      transform: translateY(-50%);
+      background-image: url(../images/icons/dropdown.svg);
+    }
+  }
+
+  &__dropdown-list {
+    position: absolute;
+    padding-top: 10px;
+    max-width: 150px;
+    display: none;
+  }
+  &__dropdown-item {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__link,
+  &__dropdown-btn,
+  &__login {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    white-space: nowrap;
+
+    color: #707070;
+    transition: color, 0.4s;
+    &:hover {
+      color: #3c82f4;
+    }
+  }
+  &__user {
+    &--mob {
+      display: none;
+    }
+  }
+  &__login {
+    margin-right: 25px;
+  }
+  &__sign {
+    padding: 19px 22px;
+  }
+  &__sign,
+  &__login {
+    vertical-align: middle;
+  }
+  &__burger {
+    display: none;
+    position: relative;
+    z-index: 3;
+    height: 42px;
+    width: 60px;
+    &.active .header__burger-item--1,
+    &.active .header__burger-item--4 {
+      opacity: 0;
+    }
+    &.active .header__burger-item--2 {
+      transform: translateY(-50%) rotate(45deg);
+    }
+    &.active .header__burger-item--3 {
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+  &__burger-item {
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+    border-radius: 6px;
+    background-color: #fff;
+    opacity: 0.9;
+
+    transition: all, 0.45s;
+    &--1 {
+      top: 0;
+    }
+    &--2,
+    &--3 {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &--4 {
+      bottom: 0;
+    }
+  }
+  @media (max-width: 1000px) {
+    &__dropdown {
+      text-align: center;
+    }
+    &__dropdown-btn {
+      color: #fff;
+      width: 100%;
+      text-align: center;
+    }
+    &__dropdown-list {
+      overflow-y: hidden;
+      max-width: 100%;
+      position: relative;
+      text-align: center;
+    }
+    &__inner {
+      padding-top: 15px;
+      justify-content: space-between;
+    }
+    &__burger {
+      display: block;
+    }
+    &__nav {
+      padding: 35px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      width: 50vw;
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      background-color: #000;
+      box-shadow: -1px -1px 11px 2px #fff;
+      transform: translateX(1000px);
+      transition: all, 0.45s;
+      overflow-y: auto;
+      &.active {
+        transform: translateX(0);
+      }
+    }
+    &__list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__item {
+      width: 100%;
+      margin: 10px 0;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+    &__link {
+      color: #fff;
+      display: block;
+      padding: 7px;
+      text-align: center;
+      transition: color, 0.45s;
+    }
+  }
+
+  @media (max-width: 640px) {
+    &__inner {
+      justify-content: space-between;
+    }
+
+    &__user {
+      &--pc {
+        display: none;
+      }
+      &--mob {
+        display: block;
+      }
+    }
+    &__login {
+      color: #fff;
+      margin: 20px 0;
+      text-align: center;
+      display: block;
+    }
+
+    &__nav {
+      width: 100vw;
+    }
+  }
+}

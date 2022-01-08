@@ -1,0 +1,55 @@
+.we-helped {
+  background-image: url(../images/we-helped.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 290px 0;
+    margin-bottom: 180px;
+  }
+  &__paragraph {
+    max-width: 1200px;
+
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 105px;
+
+    text-align: center;
+  }
+  @media (max-width: 1000px) {
+    &__inner {
+      margin-bottom: 140px;
+    }
+
+    &__paragraph {
+      font-size: 50px;
+      line-height: 75px;
+    }
+  }
+  @media (max-width: 500px) {
+    background-size: cover;
+    &__inner {
+      padding: 200px 0;
+      margin-bottom: 80px;
+    }
+
+    &__paragraph {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+  @media (max-width: 400px) {
+    &__inner {
+      padding: 150px 0;
+      margin-bottom: 40px;
+    }
+
+    &__paragraph {
+      font-size: 30px;
+      line-height: 50px;
+    }
+  }
+}
